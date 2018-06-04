@@ -28,7 +28,23 @@ public:
 		suite[1] = "Diamonds";
 		suite[2] = "Hearts";
 		suite[3] = "Spades";
+		for(int i=0;i<10;i++){
+			number[i] = char(i);
+		}
+		number[10] = 'J';
+		number[11] = 'Q';
+		number[12] = 'K';
 	}
+
+	void print(int idx){
+		cout<<number[idx%13]<<" of "<<suite[idx/13]<<"."<<endl;
+	}
+
+	void print(int s, int n){
+		cout<<number[n]<<" of "<<suite[s]<<"."<<endl; 
+	}
+
 };
+
 
 
